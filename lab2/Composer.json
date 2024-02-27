@@ -1,0 +1,11 @@
+{
+    "autoload": {
+        "files": [
+            "config.php"
+        ],
+        "classmap": [
+            "Model/Counter.php",
+            "Model/Visitor.php"
+        ]
+    }
+}
