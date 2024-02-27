@@ -1,4 +1,5 @@
 <?php
+session_start();
 require_once 'autoload.php';
 
 $counter = new Counter(COUNTER_FILE);
@@ -17,6 +18,6 @@ $visitsCount = $counter->getVisitCount();
     <title>Visits Counter</title>
 </head>
 <body>
-   <h1> Visits: <?php echo $visitsCount?> </h1>
+   <h1> Counted Unique Visitors :<br><br> <?php echo $visitsCount ?> </h1>
 </body>
 </html>
