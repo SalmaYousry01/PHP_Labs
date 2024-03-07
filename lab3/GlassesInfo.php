@@ -17,7 +17,7 @@ if ($_SERVER["REQUEST_METHOD"] == "GET" && isset($_GET["id"])) {
         //echo "<br>";
 
         // Check if $item is null or not
-        if ($item !== null) {
+        if (!empty($item)) {
             echo  '<table>';
             echo   '<tr>';
             echo '<th>' . "id" . '</th>';
@@ -34,7 +34,7 @@ if ($_SERVER["REQUEST_METHOD"] == "GET" && isset($_GET["id"])) {
             echo '<td>' . $item->product_name . '</td>';
             echo '<td>' . $item->list_price . '</td>';
             echo '<td>' . $item->Rating . '</td>';
-            echo '<td>' . "<img width='200' height='150' src='PHP/lab3/images/" . $item->Photo . "'>" . '</td>';
+            echo '<td>' . "<img width='200' height='200' src='" . "/lab3/images/" . $item->Photo . "'>" . '</td>';
             echo   '</tr>';
 
             echo  '</table>';

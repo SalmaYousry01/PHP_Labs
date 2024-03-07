@@ -66,14 +66,14 @@ class MainDatabase implements DbHandler
     {
         //return object of item
         $item = Items::where($primary_key,"=",$id)->get();
-        if(count($item) > 0)
+        if(!empty($item) > 0)
             return $item[0];
 
     }
     public function search_by_column($name_column, $value)
     {
         $items = Items::where($name_column,"like","%$value%")->get();
-        if(count($items) > 0)
+        if(!empty($items) > 0)
         return $items;
     }
 }
